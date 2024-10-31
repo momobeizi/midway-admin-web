@@ -1,12 +1,7 @@
-import { HashRouter } from 'react-router-dom';
-import Router from './router';
+import MLayout from './layout';
 
 const App = () => {
-  return (
-    <HashRouter>
-      <Router />
-    </HashRouter>
-  );
+  return <MLayout />;
 };
 
 export default App;

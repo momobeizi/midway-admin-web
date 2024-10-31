@@ -1,0 +1,21 @@
+.m-layout {
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f7f7;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  &-left {
+    overflow: hidden;
+    height: 100%;
+    width: 200px;
+    transition: width 0.2s ease-in-out;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100% - 200px);
+    transition: width 0.2s ease-in-out;
+  }
+}
