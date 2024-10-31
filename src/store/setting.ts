@@ -6,11 +6,18 @@ import { create } from 'zustand';
 export interface settingsStoreType {
   isDark: boolean;
   setThemeDark: (value: boolean) => void;
+  collapsed: boolean;
 }
 
-export const useSettingStore = create<settingsStoreType>()((set) => ({
-  isDark: false, // 深色模式 切换暗黑模式
-
+const useSettingStore = create<settingsStoreType>()((set) => ({
+  // 深色模式 切换暗黑模式
+  isDark: false,
   // 设置暗黑模式
   setThemeDark: (value: boolean) => set({ isDark: value }),
+  // 侧边栏是否收起
+  collapsed: false,
+  // 设置侧边栏是否收起
+  changeCollapsed: (value: boolean) => set({ collapsed: value }),
 }));
+
+export default useSettingStore

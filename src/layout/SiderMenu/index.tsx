@@ -1,14 +1,16 @@
 import React from 'react';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
+import { useSettingStore } from '@/store';
 import './index.less';
 
 const MSiderMenu: React.FC = () => {
+  const { collapsed } = useSettingStore();
   return (
-    <Layout.Sider trigger={null} collapsible>
+    <Layout.Sider trigger={null} collapsible collapsed={collapsed}>
       <div className="m-layout-left-logo">
         <img src="" alt="" />
-        <span>MIDWAY-ADMIN</span>
+        {!collapsed ? <span>MIDWAY-ADMIN</span> : null}
       </div>
       <Menu
         theme="dark"

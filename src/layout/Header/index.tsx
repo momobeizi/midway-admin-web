@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Layout, Button } from 'antd';
+import { useSettingStore } from '@/store/index';
 import './index.less';
 
 const MHeader: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const { collapsed, changeCollapsed } = useSettingStore();
 
   return (
     <Layout.Header className="m-header">
       <Button
         type="text"
         icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-        onClick={() => setCollapsed(!collapsed)}
+        onClick={() => changeCollapsed(!collapsed)}
         style={{
           fontSize: '16px',
           width: 26,
