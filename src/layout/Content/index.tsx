@@ -1,13 +1,10 @@
-import { HashRouter } from 'react-router-dom';
-import Router from '../../router';
+import { Outlet } from 'react-router-dom';
 import './index.less';
 
 const MContent = () => {
   return (
     <div className='m-content'>
-      <HashRouter>
-        <Router />
-      </HashRouter>
+       <Outlet />
     </div>
   );
 };
