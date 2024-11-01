@@ -7,12 +7,7 @@ import './index.less';
 const MSiderMenu: React.FC = () => {
   const { collapsed } = useSettingStore();
   return (
-    <Layout.Sider
-      trigger={null}
-      collapsible
-      collapsed={collapsed}
-      style={{ backgroundColor: '##2f3447' }}
-    >
+    <Layout.Sider trigger={null} collapsible collapsed={collapsed}>
       <div className="m-layout-left-logo">
         <img src="" alt="" />
         {!collapsed ? <span>MIDWAY-ADMIN</span> : null}
