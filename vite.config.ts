@@ -17,6 +17,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3001, // 设置服务启动端口号
+    host: '0.0.0.0',
+    port: 8081,
   }
 });
